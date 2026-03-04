@@ -215,7 +215,7 @@ class LicenseEnumMeta(EnumMeta):
 
         # Load the licenses JSON file
         filename = Path(__file__).parent.parent.joinpath("data", "licenses.json")
-        with open(filename, "r") as fid:
+        with open(filename, "r", encoding="utf-8") as fid:
             licenses = json.load(fid)
 
         # Add base licenses
